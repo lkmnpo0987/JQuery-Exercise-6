@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img{
+            width:200px;
+            height:200px;
+            border-radius: 5px;
+        }
+
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<p>Click the button multiple times to toggle the animation.</p>
+
+<button>Start Animation</button>
+
+<div id="arrayImages"></div>
+
+    
+<script>
+
+    var images = ["C:\Users\Abhishek Mishra\Desktop\third.jpg",
+                    "C:\Users\Abhishek Mishra\Desktop\second.jpg",
+                    "C:\Users\Abhishek Mishra\Desktop\fifth.jpg",
+                    "C:\Users\Abhishek Mishra\Desktop\fourth.jpg",
+                    "C:\Users\Abhishek Mishra\Desktop\sixth.jpg"
+]
+for (var i = 0; i < images.length; i++) {
+  document.getElementById("arrayImages").src = images.src;
+  
+}
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({
+      height: 'toggle'
+    });
+  });
+});
+</script>
+
+</body>
+</html>
