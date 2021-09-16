@@ -1,13 +1,13 @@
-<html>
+<html lang="en">
     <head>
-        <title>Q15</title>
+        <title>Jquery</title>
    <meta charset="UTF-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         </head>
    <body>
 
- <div id="div1"><b>Hello and Welcome to jQuery</b></div>
-        <button type="button">Click Me!</button>
+ <div id="div1">Hello and Welcome to jQuery</div>
+       <table ><tr> <button type="button">cross button</button></tr></table>
 
 <script>
     $(document).ready(function()
@@ -18,15 +18,18 @@
         $("button").click(function()
        {
       
-            $.ajax({url:"abhi.txt",async:'true',dataType:'text',type:'GET',success:function(result) {
+            $.ajax({url:"load.txt",async:'true',dataType:'text',type:'DELETE',success:function(result) {
                 setTimeout(function(){
                     console.log(result);
                      $('#div1').append('</br>'+result);
+                     $('button').remove();
+
+                      $('table tr').append('</br>button removed');
                 },1000);
                 
                         
             },error:function(){
-                console.log("error")
+                
             }});
             console.log("outside ajax");
             
